@@ -67,6 +67,7 @@ export default function Home() {
           <li><a href="#designs">Bộ Sưu Tập</a></li>
           <li><a href="#about">Giá Dịch Vụ</a></li>
           <li><Link to="/game">Mini Game</Link></li>
+          <li><a href="#daotao">Đào Tạo</a></li>
         </ul>
         <button className="hn-nav-book">Đặt Lịch Ngay</button>
       </nav>
@@ -229,6 +230,73 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Đào Tạo */}
+      <section id="daotao" className="hn-training">
+        <div className="hn-training-inner">
+          <div className="hn-section-header" style={{ textAlign: 'left', marginBottom: '2.5rem' }}>
+            <div className="hn-section-eyebrow">Thuỷ Linh Beauty Studio</div>
+            <h2 className="hn-section-title">Đào Tạo Nail<br />Chuyên Nghiệp</h2>
+            <p className="hn-section-sub" style={{ maxWidth: '560px' }}>
+              Bạn thích làm đẹp nhưng chưa biết bắt đầu từ đâu? Hay muốn nâng tay nghề để kiếm thêm thu nhập?
+              <br /><strong>Ở đây, bạn không chỉ học làm nail — mà học cách kiếm tiền từ nail.</strong>
+            </p>
+          </div>
+
+          <div className="hn-training-grid">
+            {/* Điểm khác biệt */}
+            <div className="hn-tr-card">
+              <div className="hn-tr-icon">💖</div>
+              <h3 className="hn-tr-title">Điểm Khác Biệt</h3>
+              <ul className="hn-tr-list">
+                <li>Dạy 1-1 hoặc nhóm nhỏ</li>
+                <li>Mỗi học viên 1 lộ trình riêng</li>
+                <li>Tập trung thế mạnh từng người</li>
+                <li>Cầm tay chỉ việc</li>
+              </ul>
+            </div>
+
+            {/* Lộ trình */}
+            <div className="hn-tr-card hn-tr-card--featured">
+              <div className="hn-tr-icon">📚</div>
+              <h3 className="hn-tr-title">Lộ Trình Học</h3>
+              <div className="hn-tr-path">
+                <div className="hn-tr-step">
+                  <span className="hn-tr-badge">🔰 Người Mới</span>
+                  <span>Cơ bản · Sơn gel · Form móng</span>
+                </div>
+                <div className="hn-tr-step">
+                  <span className="hn-tr-badge">🎨 Nâng Cao</span>
+                  <span>Vẽ móng · Đính đá · Phối màu</span>
+                </div>
+                <div className="hn-tr-step">
+                  <span className="hn-tr-badge">💼 Ra Nghề</span>
+                  <span>Làm khách thật · Tư vấn · Upsell</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Cam kết */}
+            <div className="hn-tr-card">
+              <div className="hn-tr-icon">🔥</div>
+              <h3 className="hn-tr-title">Cam Kết</h3>
+              <ul className="hn-tr-list">
+                <li>💰 Làm tại nhà / tiệm / mở tiệm</li>
+                <li>✅ Không giấu nghề</li>
+                <li>✅ Học đến khi làm được</li>
+                <li>✅ Hỗ trợ sau khóa</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="hn-tr-cta">
+            <a href="tel:0839056090" className="hn-btn-primary hn-tr-btn">
+              📞 Gọi Tư Vấn Ngay
+            </a>
+            <span className="hn-tr-phone">0839 056 090</span>
+          </div>
+        </div>
+      </section>
+
       {/* Game promo */}
       <section className="hn-game">
         <div>
@@ -266,6 +334,7 @@ export default function Home() {
               <li><a href="#designs">Bộ Sưu Tập</a></li>
               <li><a href="#about">Về Chúng Tôi</a></li>
               <li><Link to="/game">Mini Game</Link></li>
+              <li><a href="#daotao">Đào Tạo</a></li>
               <li><Link to="/login">Đăng Nhập</Link></li>
             </ul>
           </div>

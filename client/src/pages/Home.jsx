@@ -1,21 +1,21 @@
 import { Link } from 'react-router-dom';
 
 const DESIGNS = [
-  { name: 'Ombre Hồng Pastel',  price: 'từ 150.000đ', bg: 'linear-gradient(135deg,#FFB3C6,#FF6B9D)' },
-  { name: 'French Nail Classic', price: 'từ 120.000đ', bg: 'linear-gradient(135deg,#F5F0EC,#DDBA9C)' },
-  { name: 'French Ngôi Sao',     price: 'từ 130.000đ', bg: 'linear-gradient(135deg,#FFE4E1,#FFB3C6)' },
-  { name: '3D Tiffany Blue',     price: 'từ 250.000đ', bg: 'linear-gradient(135deg,#A8EDDE,#4ECDC4)' },
-  { name: 'Nail Holographic',    price: 'từ 200.000đ', bg: 'linear-gradient(135deg,#FFD700,#FF6B6B,#A8EDDE)' },
-  { name: 'French Glitter Bạc', price: 'từ 180.000đ', bg: 'linear-gradient(135deg,#C0C0C0,#E8E8E8,#A8A8A8)' },
-  { name: 'Cat-Eye Tím',         price: 'từ 180.000đ', bg: 'linear-gradient(135deg,#9B59B6,#6C3483)' },
-  { name: 'Nghệ Thuật Đa Sắc', price: 'từ 220.000đ', bg: 'linear-gradient(135deg,#FF6B9D,#A8EDDE,#FFD700,#9B59B6)' },
+  { name: 'Ombre Hồng Pastel',  price: 'từ 150.000đ', src: '/images/nail-01.jpg' },
+  { name: 'French Nail Classic', price: 'từ 120.000đ', src: '/images/nail-02.jpg' },
+  { name: 'French Ngôi Sao',     price: 'từ 130.000đ', src: '/images/nail-03.jpg' },
+  { name: '3D Tiffany Blue',     price: 'từ 250.000đ', src: '/images/nail-04.jpg' },
+  { name: 'Nail Holographic',    price: 'từ 200.000đ', src: '/images/nail-05.jpg' },
+  { name: 'French Glitter Bạc', price: 'từ 180.000đ', src: '/images/nail-06.jpg' },
+  { name: 'Cat-Eye Tím',         price: 'từ 180.000đ', src: '/images/nail-07.jpg' },
+  { name: 'Nghệ Thuật Đa Sắc', price: 'từ 220.000đ', src: '/images/nail-08.jpg' },
 ];
 
 const HERO_TILES = [
-  { bg: 'linear-gradient(135deg,#2C2320,#5a3d35)', emoji: '💅' },
-  { bg: 'linear-gradient(135deg,#FF6B9D,#FFB3C6)', emoji: '🌸' },
-  { bg: 'linear-gradient(135deg,#DDBA9C,#F5F0EC)', emoji: '✨' },
-  { bg: 'linear-gradient(135deg,#9B59B6,#6C3483)', emoji: '💜' },
+  { src: '/images/nail-01.jpg' },
+  { src: '/images/nail-03.jpg' },
+  { src: '/images/nail-05.jpg' },
+  { src: '/images/nail-07.jpg' },
 ];
 
 const REVIEWS = [
@@ -58,7 +58,10 @@ export default function Home() {
 
       {/* Sticky nav */}
       <nav className="hn-nav">
-        <div className="hn-nav-brand">THUY&nbsp;<span>LINH</span></div>
+        <div className="hn-nav-brand">
+          <img src="/images/logo.jpg" alt="Thủy Linh Nail" className="hn-nav-logo" />
+          THUY&nbsp;<span>LINH</span>
+        </div>
         <ul className="hn-nav-links">
           <li><a href="#home">Trang Chủ</a></li>
           <li><a href="#designs">Bộ Sưu Tập</a></li>
@@ -103,12 +106,8 @@ export default function Home() {
 
         <div className="hn-hero-right">
           {HERO_TILES.map((t, i) => (
-            <div
-              key={i}
-              className="hn-hero-tile"
-              style={{ background: t.bg }}
-            >
-              <span style={{ fontSize: '3.5rem' }}>{t.emoji}</span>
+            <div key={i} className="hn-hero-tile">
+              <img src={t.src} alt="nail" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
           ))}
         </div>
@@ -147,8 +146,8 @@ export default function Home() {
         <div className="hn-designs-grid">
           {DESIGNS.map((d, i) => (
             <div key={i} className="hn-design-card">
-              <div className="hn-design-thumb" style={{ background: d.bg }}>
-                <span style={{ fontSize: '2.5rem', opacity: 0.8 }}>💅</span>
+              <div className="hn-design-thumb">
+                <img src={d.src} alt={d.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div className="hn-design-info">
                 <div className="hn-design-name">{d.name}</div>
@@ -162,7 +161,9 @@ export default function Home() {
       {/* About */}
       <section id="about" className="hn-about">
         <div className="hn-about-inner">
-          <div className="hn-about-img">💅</div>
+          <div className="hn-about-img">
+            <img src="/images/storefront.jpg" alt="Thủy Linh Nail Studio" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+          </div>
           <div>
             <div className="hn-about-tag">Về Chúng Tôi</div>
             <h2 className="hn-about-title">Nghệ Thuật<br />Từ Tâm Huyết</h2>
